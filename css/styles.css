@@ -664,10 +664,10 @@ body {
     flex-wrap: wrap;
     width: 206px;
     margin-left: 70px;
-    margin-right:auto;
+    margin-right:93px;
     padding-bottom: 0px;
     align-items: center;
-    align-content: center;
+    align-content: flex-start;
 }
 
 .joing-network {
@@ -678,6 +678,20 @@ body {
 .network-contacts > .social-networks {
     margin-top: 0;
 }
+
+/* Signup-form */
+.signup {
+    display: block;
+    align-content: flex-start;
+}
+
+.signup-form-email > .title {
+    color: var(--secondary-background-color);
+
+    margin-bottom: 20px;
+}
+
+
 
 /* potfolio/css */
 .portfolio-container {
