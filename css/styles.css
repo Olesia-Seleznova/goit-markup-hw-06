@@ -682,24 +682,89 @@ body {
 /* Signup-form */
 .signup {
     display: block;
-    align-content: flex-start;
+    align-content: flex-start; 
 }
 
-.signup-form-email > .title {
-    color: var(--secondary-background-color);
+.signup-form {
+    display: flex;
+}
 
+.signup > .title {
+    color: var(--secondary-background-color);
     margin-bottom: 20px;
 }
 
+.signup-form-email {
+    display: flex;
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.signup-form input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    width: 100%;
+   
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    color: var(--secondary-background-color);
+    background-color: #2F303A;
+}
+
+.btn-submit {
+    padding: 10px 29px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+   
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    letter-spacing: 0.06em;
+    border: none;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--secondary-background-color);
+    background-color: var(--accent-color);
+
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color:var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
+}
+
+.icon-send {
+    margin-left: 10px;
+}
 
 
 /* potfolio/css */
+
 .portfolio-container {
     display: flex;
     margin-top: 0;
     margin-bottom: 50px;
-    justify-content: center; 
-}
+    justify-content: center;
+} 
 
 .portfolio-nav + .portfolio-nav {
     margin-left: 8px;
