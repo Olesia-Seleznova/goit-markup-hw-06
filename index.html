@@ -388,7 +388,7 @@
               <input type="email" name="email" classs="email" placeholder="E-mail">
             </label>
             <button type="submit" class="btn-submit">Підписатися<svg class="icon-send" width="24" height="24">
-              <use href="./images/images-icons/icon-send.svg#icon-icon-send">Icon-send</use>
+              <use href="./images/images-icons/icons.svg#icon-icon-send">Icon-send</use>
             </svg></button>
           </form>
         </div>
@@ -397,7 +397,7 @@
   </footer>
 
   <!--Modal-window-->
-    <div class="backdrop is-hidden" data-modal> 
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close> 
           <svg width="11" height="11">
@@ -405,6 +405,41 @@
             </use>
           </svg>
         </button>
+
+        <div class="callback">
+          <p class="callback-title">Залиште свої данні, ми вам перетелефонуємо</p>
+          <form name="callback-form" class="callback-form">
+            
+            <div class="callback-username">
+              <label class="callback-form-username">
+                Ім'я
+                <input type="text" name="uername" class="uername">
+              </label>
+            </div>
+
+            <div class="callback-phone">
+              <label class="callback-phone-number">
+                Телефон
+                <input type="phone" name="phone" class="phone">
+              </label>
+            </div>
+            
+           <div class="callback-mail"> 
+            <label class="callback-mail-adress">
+              Пошта
+              <input type="mail" name="mail" class="mail">
+            </label>
+           </div>
+
+           <div class="callback-area">
+            <label class="callback-area-coment">
+              Коментарій
+              <input type="text" name="text" class="text">
+            </label>
+           </div>
+    
+          </form>
+        </div>
       </div>
     </div>
 

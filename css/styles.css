@@ -756,7 +756,6 @@ body {
     margin-left: 10px;
 }
 
-
 /* potfolio/css */
 
 .portfolio-container {
@@ -962,4 +961,31 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
 
     cursor: pointer;
+}
+
+.callback {
+    display: block;
+    padding: 40px;
+}
+
+.callback-title {
+    display: flex;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15px;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.callback-form-username,
+.callback-phone-number {
+    width: 100%;
+}
+
+.callback-username,
+.callback-phone,
+.callback-mail,
+.callback-area {
+    display: flex;
 }
