@@ -406,38 +406,49 @@
           </svg>
         </button>
 
+       
         <div class="callback">
           <p class="callback-title">Залиште свої данні, ми вам перетелефонуємо</p>
           <form name="callback-form" class="callback-form">
-            
+           
             <div class="callback-username">
               <label class="callback-form-username">
-                Ім'я
+                <span class="callback-name">Ім'я</span> 
                 <input type="text" name="uername" class="uername">
               </label>
             </div>
 
             <div class="callback-phone">
               <label class="callback-phone-number">
-                Телефон
+                <span class="callback-name">Телефон</span>
                 <input type="phone" name="phone" class="phone">
               </label>
             </div>
             
            <div class="callback-mail"> 
             <label class="callback-mail-adress">
-              Пошта
+              <span class="callback-name">Пошта</span>            
               <input type="mail" name="mail" class="mail">
             </label>
            </div>
 
            <div class="callback-area">
             <label class="callback-area-coment">
-              Коментарій
-              <input type="text" name="text" class="text">
+              <span >Коментарій</span>              
+              <textarea name="coment" class="coment" rows="7" placeholder="Введіть текст">
+              </textarea>
             </label>
            </div>
-    
+          
+           <div class="consent">
+            <label class="consent-accept">
+              <input type="text" name="text" class="contract">
+              <span class="contract-text">Погоджуюсь з розсилкою та приймаю</span>
+              <a class="consent-contract" href=""><span class="contract-text content">Умови договору</span></a>              
+            </label>
+           </div>
+
+           <button type="submit" class="submit">Відправити</button>
           </form>
         </div>
       </div>
