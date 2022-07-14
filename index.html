@@ -406,37 +406,47 @@
           </svg>
         </button>
 
-       
+        <p class="callback-title">Залиште свої данні, ми вам перетелефонуємо</p>
         <div class="callback">
-          <p class="callback-title">Залиште свої данні, ми вам перетелефонуємо</p>
           <form name="callback-form" class="callback-form">
-           
+            
             <div class="callback-username">
-              <label class="callback-form-username">
+              <label class="callback-form">
                 <span class="callback-name">Ім'я</span> 
-                <input type="text" name="uername" class="uername">
+                <input type="text" name="uername" class="uername" minlength="3">
               </label>
+              <svg class="icon-callback-name" width="12" heigh="12">
+                <use href="./images/images-icons/icons.svg#icon-iccon-person">
+                </use>
+              </svg>
             </div>
 
-            <div class="callback-phone">
-              <label class="callback-phone-number">
+            <div class="calback-phone">
+              <label class="callback-form">
                 <span class="callback-name">Телефон</span>
                 <input type="phone" name="phone" class="phone">
               </label>
+              <svg class="icon-callback-phone" width="12" heigh="12">
+                <use href="./images/images-icons/icons.svg#icon-icon-phone">
+                </use>
+              </svg>
             </div>
             
-           <div class="callback-mail"> 
-            <label class="callback-mail-adress">
+           <div class="callback-mail">
+            <label class="callback-form">
               <span class="callback-name">Пошта</span>            
               <input type="mail" name="mail" class="mail">
             </label>
+            <svg class="icon-callback-mail" width="12" heigh="12"> 
+              <use href="./images/images-icons/icons.svg#icon-icon-email">
+              </use>
+            </svg> 
            </div>
 
            <div class="callback-area">
-            <label class="callback-area-coment">
+            <label class="callback-coment">
               <span >Коментарій</span>              
-              <textarea name="coment" class="coment" rows="7" placeholder="Введіть текст">
-              </textarea>
+              <input name="coment" class="coment" rows="7" placeholder="Ведіть текст">
             </label>
            </div>
           

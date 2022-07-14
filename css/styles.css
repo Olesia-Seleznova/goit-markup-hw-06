@@ -968,7 +968,7 @@ body {
 }
 
 .callback-title {
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 0px;
     font-weight: 700;
     font-size: 20px;
@@ -977,21 +977,23 @@ body {
     color: var(--secondary-text-color);
 }
 
+.callback-form {
+    display: block;
+}
+
 .callback-username, 
-.callback-phone,
+.calback-phone,
 .callback-mail,
 .callback-area {
-    display: block;
     margin-top: 12px;
+    display: block;
 }
 
 .uername, .phone, .mail {
     width: 100%;
     height: 40px;
-    padding-top: 15px;
-    padding-left: 42px;
-    padding-bottom: 15px;
-    padding-right: 15px;
+    padding: 15px 15px 15px 42px;
+    
     outline: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color:var(--secondary-background-color);
@@ -1001,15 +1003,31 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.uername.phone.mail:focus {
+.uername:focus,
+.phone:focus,
+.mail:focus {
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    outline: #2196F3;
+    outline:  1px solid #2196F3;
+}
+
+.callback-form  .uername {
+    position: relative;
+}
+
+
+.icon-callback-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: translay(-50%);
 }
 
 .coment {
     width: 100%;
     height: 120px;
     padding: 16px;
+
+    display: flex;
 
     outline: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -1021,20 +1039,24 @@ body {
 }
 
 .coment:focus  {
-    outline: red;
+    outline: #2196F3;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.coment::placeholder {
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
 .callback-name {
+    margin-top: 0px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
-}
-
-.callback-form {
-    margin-bottom: 0px ;
 }
 
 .consent {
