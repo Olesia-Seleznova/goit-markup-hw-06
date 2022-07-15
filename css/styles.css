@@ -914,7 +914,7 @@ body {
 
     background-color: rgba(0, 0, 0, 0.2);
 
-    opacity: 1;
+    opacity: o;
     visibility: visible;
     pointer-events: initial;
 
@@ -964,16 +964,15 @@ body {
 
 /* Callback form */
 .callback {
-    display: block;
+    display: flex;
     padding: 40px 39px 40px 41px;
 }
 
-.callback-title {
-    margin-top: 40px;
+.callback-title { 
+    margin: 0;  
     font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15px;
-    text-align: center ;
+    font-size: 19px;
+    line-height: 1.15;
     color: var(--secondary-text-color);
 }
 
@@ -982,9 +981,10 @@ body {
 .callback-mail {
     display: block;
     /* gap: 12px; */
+    position: relative; 
 }
 
-.uername, .phone, .mail, .coment {
+.username, .phone, .mail, .coment {
     width: 100%;
     height: 40px;
     padding: 15px 15px 15px 42px;
@@ -998,31 +998,76 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.uername:focus,
+.username:focus,
 .phone:focus,
 .mail:focus,
 .coment:focus {
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    outline:  1px solid #2196F3;
+    outline:  1px solid var(--accent-color);
 }
 
- /* .allback-username .uername {
+.username {
     position: relative;
 }
 
 .icon-callback-name {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 15px;
+    transform: translateY(+50%);
+    width: 12px;
+    height: 12px;
+    fill: var(--secondary-text-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.username:focus .icon-callback-name {
+    fill: var(--accent-color);
+}
 
- */
+.phone {
+    position: relative;
+}
 
+.icon-callback-phone {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(+50%);
+    width: 13px;
+    height: 13px;
+    fill: var(--secondary-text-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail {
+    position: relative;
+}
+
+.icon-callback-mail {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(+50%);
+    width: 15px;
+    height: 12px;
+    fill: var(--secondary-text-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .coment {
     height: 120px;
     padding: 16px;
+    resize: none;
 }
 
 .coment::placeholder {
@@ -1040,7 +1085,7 @@ body {
 }
 
 .callback-name {
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
@@ -1057,7 +1102,6 @@ body {
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
-    
 }
 
 .checkbox-label {
@@ -1090,11 +1134,11 @@ body {
 .checkbox:checked + .checkbox-icon {
     align-items: center;
     justify-content: center;
-    background-color: #2196F3;
+    background-color: var(--accent-color);
     border: transparent;
     background-image: url(../images/images-icons/icons.svg#icon-vector);
- 
-    fill: red;
+    
+    fill: var(--accent-color);
     background-position: center;
     background-size: contain;
     background-origin: border-box;
@@ -1110,7 +1154,7 @@ body {
 
 .content {
     margin-left: auto;
-    color: #2196F3;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
