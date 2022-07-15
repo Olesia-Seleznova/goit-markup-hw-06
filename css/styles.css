@@ -924,7 +924,7 @@ body {
 }
 
 .is-hidden {
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     pointer-events: none;
 } 
@@ -962,6 +962,7 @@ body {
     cursor: pointer;
 }
 
+/* Callback form */
 .callback {
     display: block;
     padding: 40px;
@@ -969,27 +970,21 @@ body {
 
 .callback-title {
     margin-top: 40px;
-    margin-bottom: 0px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15px;
-    text-align: center;
+    text-align: center ;
     color: var(--secondary-text-color);
-}
-
-.callback-form {
-    display: block;
 }
 
 .callback-username, 
 .calback-phone,
-.callback-mail,
-.callback-area {
-    margin-top: 12px;
+.callback-mail {
     display: block;
+    /* gap: 12px; */
 }
 
-.uername, .phone, .mail {
+.uername, .phone, .mail, .coment {
     width: 100%;
     height: 40px;
     padding: 15px 15px 15px 42px;
@@ -1005,42 +1000,15 @@ body {
 
 .uername:focus,
 .phone:focus,
-.mail:focus {
+.mail:focus,
+.coment:focus {
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     outline:  1px solid #2196F3;
 }
 
-.callback-form  .uername {
-    position: relative;
-}
-
-
-.icon-callback-name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: translay(-50%);
-}
-
 .coment {
-    width: 100%;
     height: 120px;
     padding: 16px;
-
-    display: flex;
-
-    outline: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    background-color:var(--secondary-background-color);
-    
-    transition-property: outline;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-}
-
-.coment:focus  {
-    outline: #2196F3;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .coment::placeholder {
@@ -1050,13 +1018,26 @@ body {
     left:0;
 }
 
+.callback-form,
+.callback-coment {
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .callback-name {
     margin-top: 0px;
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.67;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
+} 
+
+.consent-contract {
+    text-decoration: none;
 }
 
 .consent {
@@ -1072,9 +1053,9 @@ body {
     color: var(--primary-text-color);
 }
 
-.consent .content {
+.content {
     color: #2196F3;
-    text-decoration: rgb(14, 149, 211);
+    text-decoration: underline;
 }
 
 .submit {
