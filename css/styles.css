@@ -965,7 +965,7 @@ body {
 /* Callback form */
 .callback {
     display: block;
-    padding: 40px;
+    padding: 40px 39px 40px 41px;
 }
 
 .callback-title {
@@ -1006,6 +1006,20 @@ body {
     outline:  1px solid #2196F3;
 }
 
+ /* .allback-username .uername {
+    position: relative;
+}
+
+.icon-callback-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+ */
+
+
 .coment {
     height: 120px;
     padding: 16px;
@@ -1023,7 +1037,6 @@ body {
     display: block;
     align-items: center;
     justify-content: center;
-
 }
 
 .callback-name {
@@ -1036,17 +1049,59 @@ body {
     color: var(--primary-text-color);
 } 
 
-.consent-contract {
+.consent-checkbox {
     text-decoration: none;
 }
 
-.consent {
+.checkbox-div {
     display: flex;
     margin-top: 20px;
     margin-bottom: 30px;
+    
 }
 
-.contract-text {
+.checkbox-label {
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox {
+    position: absolute;
+    top:50%;
+    left: 13px;
+    transform: translateY(-50%);
+    margin-right: 9px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.checkbox-icon {
+    margin-left: 13px;
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    top:4px;
+    border: 2px solid var(--secondary-text-color);
+    border-radius: 2px;
+}
+
+.checkbox:checked + .checkbox-icon {
+    align-items: center;
+    justify-content: center;
+    background-color: #2196F3;
+    border: transparent;
+    background-image: url(../images/images-icons/icons.svg#icon-vector);
+ 
+    fill: red;
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.checkbox-text {
+    margin-left: 36px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;   
@@ -1054,6 +1109,7 @@ body {
 }
 
 .content {
+    margin-left: auto;
     color: #2196F3;
     text-decoration: underline;
 }
@@ -1063,7 +1119,6 @@ body {
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
 
