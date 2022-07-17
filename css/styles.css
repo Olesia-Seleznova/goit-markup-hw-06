@@ -551,31 +551,21 @@ body {
 
 /* footer */
 .footer-section {
-    display: flex;
-    width: 1600px;
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-top: 0;
     background-color: #2F303A;
 }
 
 .footer-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
-
-.footer-block {
-    width: 231px;
-} 
 
 .logo {
     margin-bottom: 20px;
@@ -660,14 +650,7 @@ body {
 
 /* Network contacts */
 .network-contacts {
-    display: flex;
-    flex-wrap: wrap;
-    width: 206px;
-    margin-left: 70px;
-    margin-right:93px;
     padding-bottom: 0px;
-    align-items: center;
-    align-content: flex-start;
 }
 
 .joing-network {
@@ -677,6 +660,7 @@ body {
 
 .network-contacts > .social-networks {
     margin-top: 0;
+    padding-bottom: 0;
 }
 
 /* Signup-form */
@@ -715,8 +699,20 @@ body {
     font-size: 16px;
     line-height: 1.88;
 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
     color: var(--secondary-background-color);
-    background-color: transparent;
+    background-color: #2F303A;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
+.signup-form:focus input {
+    border: 1px solid var(--accent-color);
+    outline: transparent;
 }
 
 .btn-submit {
@@ -779,6 +775,7 @@ body {
     cursor: pointer;
     color: var(--secondary-text-color);
     background-color: #F5F4FA;
+    border-radius: 4px;
     border: transparent;
 
     transition-property: color, background, box-shadow, border-radius;
@@ -789,9 +786,8 @@ body {
  .portfolio-btn:hover,
  .portfolio-btn:focus {
     color: #F5F4FA;
-    background: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    background:var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
  }
 
  .portfolio-btn.active {
@@ -914,7 +910,7 @@ body {
 
     background-color: rgba(0, 0, 0, 0.2);
 
-    opacity: o;
+    opacity: 1;
     visibility: visible;
     pointer-events: initial;
 
@@ -937,6 +933,7 @@ body {
 
     min-width:528px;
     min-height: 581px;
+    padding: 40px;
 
     background-color: var(--secondary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -945,8 +942,8 @@ body {
 
 .modal-close-btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 8px;
+    right: 8px;
 
     width: 30px;
     height: 30px;
@@ -963,13 +960,8 @@ body {
 }
 
 /* Callback form */
-.callback {
-    display: flex;
-    padding: 40px 39px 40px 41px;
-}
-
 .callback-title { 
-    margin: 0;  
+    margin-bottom: 0;
     font-weight: 700;
     font-size: 19px;
     line-height: 1.15;
@@ -980,7 +972,6 @@ body {
 .calback-phone,
 .callback-mail {
     display: block;
-    /* gap: 12px; */
     position: relative; 
 }
 
@@ -989,11 +980,11 @@ body {
     height: 40px;
     padding: 15px 15px 15px 42px;
     
-    outline: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color:var(--secondary-background-color);
 
-    transition-property: outline;
+    transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1002,8 +993,9 @@ body {
 .phone:focus,
 .mail:focus,
 .coment:focus {
+    outline: transparent;
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    outline:  1px solid var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .username {
@@ -1014,9 +1006,9 @@ body {
     position: absolute;
     top: 50%;
     left: 15px;
-    transform: translateY(+50%);
-    width: 12px;
-    height: 12px;
+    transform: translateY(10%);
+    width: 18px;
+    height: 18px;
     fill: var(--secondary-text-color);
 
     transition-property: fill;
@@ -1036,9 +1028,9 @@ body {
     position: absolute;
     top: 50%;
     left: 15px;
-    transform: translateY(+50%);
-    width: 13px;
-    height: 13px;
+    transform: translateY(10%);
+    width: 18px;
+    height: 18px;
     fill: var(--secondary-text-color);
 
     transition-property: fill;
@@ -1054,9 +1046,9 @@ body {
     position: absolute;
     top: 50%;
     left: 15px;
-    transform: translateY(+50%);
-    width: 15px;
-    height: 12px;
+    transform: translateY(15%);
+    width: 19px;
+    height: 16px;
     fill: var(--secondary-text-color);
 
     transition-property: fill;
@@ -1085,6 +1077,7 @@ body {
 }
 
 .callback-name {
+    display: block;
     margin-top: 10px;
     margin-bottom: 4px;
     font-weight: 400;
@@ -1100,6 +1093,7 @@ body {
 
 .checkbox-div {
     display: flex;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -1128,8 +1122,7 @@ body {
     height: 15px;
     top:4px;
     border: 2px solid var(--secondary-text-color);
-    border-radius: 2px;
-    
+    border-radius: 2px; 
 }
 
 .checkbox:checked + .checkbox-icon {
@@ -1137,7 +1130,7 @@ body {
     justify-content: center;
     background-color: var(--accent-color);
     border: transparent;
-    background-image: url(../images/images-icons/icons.svg#icon-vector);
+    background-image: url(../images/images-icons/icon-check.svg#icon-icon-check);
     
     fill: var(--accent-color);
     background-position: center;
