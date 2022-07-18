@@ -1017,7 +1017,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.callback-form:focus + .icon-callback-name {
+.callback-username:focus-within > .icon-callback-name {
     fill: var(--accent-color);
 }
 
@@ -1039,6 +1039,10 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.calback-phone:focus-within > .icon-callback-phone {
+    fill: var(--accent-color);
+}
+
 .mail {
     position: relative;
 }
@@ -1055,6 +1059,10 @@ body {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.callback-mail:focus-within > .icon-callback-mail {
+    fill: var(--accent-color);
 }
 
 .coment {
