@@ -698,6 +698,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
+    outline: transparent;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -705,14 +706,14 @@ body {
 
     color: var(--secondary-background-color);
     background-color: #2F303A;
+
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
-.signup-form:focus input {
+.signup-form-email:focus .email {
     border: 1px solid var(--accent-color);
-    outline: transparent;
 }
 
 .btn-submit {
@@ -979,6 +980,7 @@ body {
     width: 100%;
     height: 40px;
     padding: 15px 15px 15px 42px;
+    outline: transparent;
     
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -993,7 +995,6 @@ body {
 .phone:focus,
 .mail:focus,
 .coment:focus {
-    outline: transparent;
     box-shadow: 0px 1px 3px #0000001f, 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border: 1px solid var(--accent-color);
 }
@@ -1016,7 +1017,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.username:focus .icon-callback-name {
+.callback-form:focus + .icon-callback-name {
     fill: var(--accent-color);
 }
 
@@ -1128,11 +1129,10 @@ body {
 .checkbox:checked + .checkbox-icon {
     align-items: center;
     justify-content: center;
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     border: transparent;
-    background-image: url(../images/images-icons/icon-check.svg#icon-icon-check);
+    background-image: url(../images/images-icons/icon-check1.svg);
     
-    fill: var(--accent-color);
     background-position: center;
     background-size: contain;
     background-origin: border-box;
