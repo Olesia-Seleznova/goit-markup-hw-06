@@ -712,7 +712,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
-.signup-form-email:focus .email {
+.signup-form-email:focus-within > input {
     border: 1px solid var(--accent-color);
 }
 
@@ -1137,7 +1137,6 @@ body {
 .checkbox:checked + .checkbox-icon {
     align-items: center;
     justify-content: center;
-    /* background-color: var(--accent-color); */
     border: transparent;
     background-image: url(../images/images-icons/icon-check1.svg);
     
