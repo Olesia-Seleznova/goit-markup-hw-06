@@ -740,7 +740,6 @@ body {
     transition-property: background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .btn-submit:hover,
@@ -962,7 +961,7 @@ body {
 
 /* Callback form */
 .callback-title { 
-    margin-bottom: 0;
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 19px;
     line-height: 1.15;
@@ -974,6 +973,7 @@ body {
 .callback-mail {
     display: block;
     position: relative; 
+    margin-bottom: 10px;
 }
 
 .username, .phone, .mail, .coment {
@@ -1066,6 +1066,8 @@ body {
 }
 
 .coment {
+    display: block;
+    width: 100%;
     height: 120px;
     padding: 16px;
     resize: none;
@@ -1087,7 +1089,6 @@ body {
 
 .callback-name {
     display: block;
-    margin-top: 10px;
     margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
